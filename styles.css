@@ -1,0 +1,87 @@
+
+.project {
+  /* background-color: Black; */
+  color: White;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.maintext {
+  margin:2px; padding: 20px; color: White;
+  padding-top: 5px; padding-bottom: 5px;
+}
+
+.shadow {
+  text-shadow: 0px 0px 4px Black, 0px 0px 8px Black, 0px 0px 10px Black, 0px 0px 16px Black;
+}
+
+.smallshadow {
+  text-shadow: 0px 0px 4px Black, 0px 0px 8px Black;
+}
+
+.left {
+  width:100%;
+  overflow:hidden;
+  position: relative;
+  left: 12px
+}
+
+.left button {
+  background-color: #373737;
+  color: White;
+  border: 2px solid #373737;
+  width:124px;
+  margin: 10px;
+  padding: 10px;
+  display: table-cell;
+  float: left;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  background-image: url('assets/tabbut.png');
+  background-repeat: repeat-x;
+}
+
+.main {
+  background-color: #373737;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 800px;
+}
+
+.header {
+  background-color: White;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  background-image: url('assets/sshot1.jpg');
+  background-repeat: repeat-x;
+  height: 105px;
+}
+
+.text-header {
+  background-image: url('assets/tile.png');
+  margin-left: 20px; margin-right: 20px;
+  border-radius: 3px;
+}
+
+.text-header2 {
+  background-image: url('assets/tile2.png');
+  margin-left: 20px; margin-right: 20px;
+  border-radius: 3px;
+}
+
+.link { color: DodgerBlue; } /* CSS link color (red) */
+.link:hover { color: MediumSeaGreen; }
+
+.invs hr{
+    height: 20px;
+    background-color: #373737;
+    border: none;
+}
+
+
+body {background-color: Black;}
