@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+
+	<body>
+
+		<div id="canvas-boids" class="canvas-boids"></div>
+
+		<div class="navbar avoid" id="spawn">
+			<div class="navbar-container">
+				<div class="navbar-header">
+					<a href="/" class="navbar-header-text"> Mason J Hawver </a>
+				</div>
+				<div class="navbar-menu">
+					<a href="/" class="navbar-menu-selected"> Home </a>
+					<a href="/project.html" class="navbar-menu-item"> Projects </a>
+					<a href="/misc.html" class="navbar-menu-item"> Misc </a>
+				</div>
+				<div class="navbar-tag">
+					<a target="_blank" href="https://github.com/MasonJohnHawver42" class="fa fa-github" style="text-decoration: none; font-size:27px; color: black;"> </a>
+					<a target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/" class="fa fa-linkedin-square" style="text-decoration: none; font-size:27px; color: black;"> </a>
+					<a target="_blank" href="/resume.pdf" class="fa fa-file-pdf-o" style="text-decoration: none; font-size:23px; color: black; position: relative; bottom: 1px; margin-left: 1px;"> </a>
+				</div>
+			</div>
+		</div>
+
+		<div class="main">
+			<button onclick="loadScript('js/again_boids.js')" style="float: right;margin-top: 33px;" class = "avoid"> 	fish_bowl 
+			</button>
+			<br> <p style="display:inline-block" class="avoid"> About Me </p>
+			<hr style="color: #f8f8f8">
+
+			<div style="display: flex; align-items: flex-start;">
+
+				<div>
+					<p style="font-size:15px; line-height:1.5; margin-top: 0px;" class="avoid">
+						I write software for robots, game engines, websites, ai, window managers, and anything else I can get my hands on.
+						Currently I'm studying to get my M.S. in Computer Science by 2026.
+						And in my spare time I like to pump iron, run, learn about philosophy, and make tiny pixel art games.
+					</p>
+
+					 <ul style="padding-left: 20px;" class="">
+					  <li> <a target="_blank" href="https://github.com/MasonJohnHawver42"> Github </a> </li>
+					  <li> <a target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/"> Linkdin </a> </li>
+					  <li> <a target="_blank" href="/resume.pdf"> Resume </a> </li>
+					</ul>
+
+				</div>
+
+				<div id="canvas" class="canvas-intro avoid"> </div>
+			</div>
+
+			<br> <p class = "avoid" style="display:inline-block"> Education </p>
+			<hr style="color: #f8f8f8">
+
+			<div style="display: flex; justify-content: space-between; align-items: center;">
+				<p style="margin-top: 4px; margin-bottom: 0px; font-size:13px;">
+					<span style="font-weight:900;">University of Minnesota - Twin Citties, </span>
+					<span> College of Science and Engineering </span>
+				</p>
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 0px;" > <i class="fa fa-map-pin"> </i> Minneapolis, MN </p>
+			</div>
+
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-left: 10px;">
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;"> Bachelor of Science, Computer Science</p>
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;" > <i class="fa fa-calendar"> </i> Sept. 2022 - May 2025</p>
+			</div>
+
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-left: 10px;">
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;"> Master of Science, Computer Science</p>
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;" > <i class="fa fa-calendar"> </i> Sept. 2025 - May 2026</p>
+			</div>
+
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+				<p style="margin-top: 4px; margin-bottom: 0px; font-size:13px; font-weight:900;"> Parkway West High School </p>
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 0px;" > <i class="fa fa-map-pin"> </i> St. Louis, MO </p>
+			</div>
+
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-left: 10px;">
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;"> Graduated Summa Cum Laude, GPA: 4.2, ACT: 34 </p>
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;" > <i class="fa fa-calendar"> </i> Sept. 2020 - May 2022</p>
+			</div>
+
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+				<p style="margin-top: 4px; margin-bottom: 0px; font-size:13px; font-weight:900;"> Waubonsie Valley High School </p>
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 0px;" > <i class="fa fa-map-pin"> </i> Aurora, IL </p>
+			</div>
+
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-left: 10px;">
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;"> Attended Freshman and Sophomore year </p>
+				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;" > <i class="fa fa-calendar"> </i> Sept. 2018 - May 2020</p>
+			</div>
+
+			<br> <br> <br> <div class="footer avoid"> </div>
+		  <hr style="color: #f8f8f8; margin-bottom: 2px; margin-top: 10px;">
+			<i class="fa fa-copyright" style="font-size: 10px;"> MJH 08/17/2004 </i>
+	</body>
+
+	<script src="./js/index.js"></script>
+
+	<script src="./js/three.js"></script>
+	<!-- <script src="./js/again_boids.js"></script> -->
+	<script src="./js/portrait.js"></script>
+
+</html>
