@@ -1,0 +1,21 @@
+
+.calender-row 
+{
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: calc(100%);
+  height: min-content;
+  margin: 0px;
+  color: #dfdfdf;
+}
+
+.calender-day 
+{
+  border: 1px black solid;
+  border-radius: 2px;
+  background-color: #777;
+  aspect-ratio: 1;
+  flex-grow: 1;
+  margin: .0625em;
+}

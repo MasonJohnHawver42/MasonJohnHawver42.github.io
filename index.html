@@ -3,20 +3,17 @@
 	<head>
 
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/calender.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	</head>
-
-	<body>
+	<body style="margin:0px;">
 
 		<div id="canvas-boids" class="canvas-boids"></div>
 
 		<div class="navbar avoid" id="spawn">
 			<div class="navbar-container">
-				<div class="navbar-header">
-					<a href="/" class="navbar-header-text"> Mason J Hawver </a>
-				</div>
 				<div class="navbar-menu">
+					<a href="/" class="navbar-header"> Mason Hawver</a>
 					<a href="/" class="navbar-menu-selected"> Home </a>
 					<a href="/project.html" class="navbar-menu-item"> Projects </a>
 					<a href="/misc.html" class="navbar-menu-item"> Misc </a>
@@ -30,78 +27,141 @@
 		</div>
 
 		<div class="main">
-			<button onclick="loadScript('js/again_boids.js')" style="float: right;margin-top: 33px;" class = "avoid"> 	fish_bowl 
-			</button>
-			<br> <p style="display:inline-block" class="avoid"> About Me </p>
-			<hr style="color: #f8f8f8">
-
-			<div style="display: flex; align-items: flex-start;">
+			<!-- <button onclick="loadScript('js/again_boids.js')" style="float: right;margin-top: 33px;" class = "avoid"> 	fish_bowl  -->
+			<!-- </button> -->
+			
+			<!-- HEADER -->
+			<p class="avoid main-header" style="margin-top: 6em;"> About Me </p>
+			<hr class="avoid main-header-bar">
+	
+			<div class="main-content-box">
 
 				<div>
-					<p style="font-size:15px; line-height:1.5; margin-top: 0px;" class="avoid">
-						I write software for robots, game engines, websites, ai, window managers, and anything else I can get my hands on.
-						Currently I'm studying to get my M.S. in Computer Science by 2026.
-						And in my spare time I like to pump iron, run, learn about philosophy, and make tiny pixel art games.
+					<p class="avoid main-text-body">
+						I'm a results driven Computer Science major with a passion for robotics and a focus on machine learning, computer vision, dynamics, and control. 
+						I write software for robots, game engines, ml/ai models, window managers, websites, and anything else I can get my hands on.
+						I'm interested in graphics programming, hockey, baseball, split keyboards, philosophy, and standup comedy.  
 					</p>
 
-					 <ul style="padding-left: 20px;" class="">
-					  <li> <a target="_blank" href="https://github.com/MasonJohnHawver42"> Github </a> </li>
-					  <li> <a target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/"> Linkedin </a> </li>
-					  <li> <a target="_blank" href="/resume.pdf"> Resume </a> </li>
-					</ul>
+					<div class="info">
+						<ul style="padding-left: 1em;">
+							<li>
+								<p class = "info-item"> mason.hawver@gmail.com </p>
+							</li>
+							<li>
+								<a class = "info-item info-item-link" target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/">linkedin</a>
+								<a class = "info-item info-item-link" target="_blank" href="https://github.com/MasonJohnHawver42">github</a>
+								<a class = "info-item info-item-link" target="_blank" href="/resume.pdf"> resume </a>
+							</li>
+						</ul>
+					</div>
+<!-- 
+					 <ul class="main-items">
+					  	<li>
 
+						</li>
+					</ul> -->
 				</div>
 
 				<div id="canvas" class="canvas-intro avoid"> </div>
 			</div>
 
-			<br> <p class = "avoid" style="display:inline-block"> Education </p>
-			<hr style="color: #f8f8f8">
+			<!-- HEADER -->
+			<p class="avoid main-header" style="margin-top: 1em;"> Education </p>
+			<hr class="avoid main-header-bar">
 
-			<div style="display: flex; justify-content: space-between; align-items: center;">
-				<p style="margin-top: 4px; margin-bottom: 0px; font-size:13px;">
-					<span style="font-weight:900;">University of Minnesota - Twin Cities, </span>
-					<span> College of Science and Engineering </span>
+			<div class="main-sub-header-box">
+				<p style="margin:0px;">
+					<span class="main-sub-header">University of Minnesota - Twin Cities</span> 
+					<span class="main-sub-header-p2"></span>
 				</p>
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 0px;" > <i class="fa fa-map-pin"> </i> Minneapolis, MN </p>
+				<p style="margin:0px;"> 
+					<span class="main-sub-header-icon fa fa-calendar"> </span>
+					<span class="main-sub-header-p3"> September 2022 - May 2025 </span>
+				</p>
 			</div>
 
-			<div style="display: flex; justify-content: space-between; align-items: center; margin-left: 10px;">
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;"> Bachelor of Science, Computer Science</p>
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;" > <i class="fa fa-calendar"> </i> Sept. 2022 - May 2025</p>
+			<div class="main-sub-sub-header-box">
+				<p style="margin:0px;">
+					<!-- <span class="main-sub-sub-header"> School Name </span>  -->
+					<em class="main-sub-sub-header-p2"> B.S. in Computer Science, Minor in Mathematics </em>
+				</p>
+				<p style="margin:0px;"> 
+					<!-- <span class="main-sub-sub-header-icon fa fa-map-pin"> </span> -->
+					<span class="main-sub-sub-header-p3"> Minneapolis, MN </span>
+				</p>
 			</div>
 
-			<div style="display: flex; justify-content: space-between; align-items: center; margin-left: 10px;">
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;"> Master of Science, Computer Science</p>
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;" > <i class="fa fa-calendar"> </i> Sept. 2025 - May 2026</p>
+			<div class="main-sub-sub-header-box" style="margin-top: 10px;">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Coursework: </span>
+					<span class="main-sub-sub-header-p2"> Machine Learning, Robotics, Algorithims and Data Structures, Computer Graphics, Differential Equations, Multi-variable Calculus, Statistics, Linear Algebra, Discrete Mathematics, and Funcional Programming</span>
+					<!-- <span class="main-sub-sub-header-p2"> CSCI 5521 Machine Learning, CSCI 5551 Robotics I, CSCI 5607 Computer Graphics I, CSCI 4041 Algorithims and Data Structures, CSCI 2021 Machine Architecture, CSCI 2041 Functional Programming, MATH 2373 Diferential Equations, MATH 2374 Multivariable Calculus, STAT 3021 Probility and Statistics, CSCI 2033 Linear Algebra, and CSCI 2011 Discrete Mathematics </span> -->
+				</p>
 			</div>
 
-			<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
-				<p style="margin-top: 4px; margin-bottom: 0px; font-size:13px; font-weight:900;"> Parkway West High School </p>
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 0px;" > <i class="fa fa-map-pin"> </i> St. Louis, MO </p>
+			<div class="main-sub-sub-header-box">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> GPA: </span>
+					<span class="main-sub-sub-header-p2"> 4.0 </span>
+				</p>
 			</div>
 
-			<div style="display: flex; justify-content: space-between; align-items: center; margin-left: 10px;">
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;"> Graduated Summa Cum Laude, GPA: 4.2, ACT: 34 </p>
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;" > <i class="fa fa-calendar"> </i> Sept. 2020 - May 2022</p>
+			<!-- HEADER -->
+			<p class="avoid main-header" style="margin-top: 2em;"> Projects </p>
+			<hr class="avoid main-header-bar">
+
+			<div class="project-overflow" id="overflow">
+				<div id="projects" class="project-box ">
+					<div class="project-frame">
+						<p></p> 
+					</div>
+					<div class="project-frame">
+						<p style="margin: 1em;"> Project 1</p> 
+					</div>
+					<div class="project-frame">
+						<p style="margin: 1em;"> Project 2</p> 
+					</div>
+					<div class="project-frame">
+						<p style="margin: 1em;"> Project 3</p> 
+					</div>
+					<div class="project-frame">
+						<p style="margin: 1em;"> Project 4</p> 
+					</div>
+					<div class="project-frame">
+						<p style="margin: 1em;"> Project 5</p> 
+					</div>
+					<div class="project-frame">
+						<p style="margin: 1em;"> Project 6</p> 
+					</div>
+					<div class="project-frame">
+						<p></p> 
+					</div>
+				</div>
 			</div>
 
-			<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
-				<p style="margin-top: 4px; margin-bottom: 0px; font-size:13px; font-weight:900;"> Waubonsie Valley High School </p>
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 0px;" > <i class="fa fa-map-pin"> </i> Aurora, IL </p>
+			<div class = "project-button-box">
+				<button class="project-button fa fa-arrow-left" onclick="projects_moveleft()"> </button>
+				<button class="project-button fa fa-arrow-right" onclick="projects_moveright()"> </button>
 			</div>
 
-			<div style="display: flex; justify-content: space-between; align-items: center; margin-left: 10px;">
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;"> Attended Freshman and Sophomore year </p>
-				<p style="font-size: 12px; color: #777; margin-top: 4px; margin-bottom: 4px;" > <i class="fa fa-calendar"> </i> Sept. 2018 - May 2020</p>
-			</div>
+			<!-- HEADER -->
+			<p class="avoid main-header" style="margin-top: 1em;"> Github Contributions </p>
+			<hr class="avoid main-header-bar">
 
-			<br> <br> <br> <div class="footer avoid"> </div>
-		  <hr style="color: #f8f8f8; margin-bottom: 2px; margin-top: 10px;">
+			<div id="calendar" style="margin: 1em; margin-top: .75em;"> </div>	
+
+			<br> <br> <br>
+			<hr class="avoid main-header-bar">
 			<i class="fa fa-copyright" style="font-size: 10px;"> MJH 08/17/2004 </i>
 	</body>
 
 	<script src="./js/index.js"></script>
+
+	<script src="./js/calender.js"></script>
+	<script> 
+		github_calender("calendar", "masonjohnhawver42");
+	</script>
 
 	<script src="./js/three.js"></script>
 	<!-- <script src="./js/again_boids.js"></script> -->
