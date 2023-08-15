@@ -37,15 +37,15 @@ const Carousel = class
     expand() 
     { 
         this.carousel_div.style.transform = "translate(0%, 0%)";
-        const carousel_bbox = this.carousel_div.getBoundingClientRect();
-        const item_bbox  = this.children[this.min_index].getBoundingClientRect();
+        // const carousel_bbox = this.carousel_div.getBoundingClientRect();
+        // const item_bbox  = this.children[this.min_index].getBoundingClientRect();
         // this.carousel_div.style.flexDirection = "column";
         // this.carousel_div.style.width = "100%";
         this.carousel_div.style.display = "block";
         this.carousel_div.style.margin = "auto";
 
-        this.current_height = carousel_bbox.bottom - carousel_bbox.top;
-        this.carousel_div.style.height = `${this.current_height}px`;
+        // this.current_height = carousel_bbox.bottom - carousel_bbox.top;
+        // this.carousel_div.style.height = `${this.current_height}px`;
 
         this.collapse_button.style.display = "inline";
         this.left_button.style.display = "none";
@@ -103,14 +103,14 @@ const Carousel = class
         }
         else 
         {
-            var delta = (end_bbox.bottom - carousel_bbox.bottom);
-            // delta *= speed;
+            // var delta = (end_bbox.bottom - carousel_bbox.bottom);
+            // // delta *= speed;
 
-            var old_height = carousel_bbox.bottom - carousel_bbox.top;
+            // var old_height = carousel_bbox.bottom - carousel_bbox.top;
 
-            console.log(delta)
-            this.current_height = old_height + delta;
-            this.carousel_div.style.height = `${this.current_height}px`;
+            // console.log(delta)
+            // this.current_height = old_height + delta;
+            // this.carousel_div.style.height = `${this.current_height}px`;
         }
 
         // this.collapse_button.style.display = !this.state ? "none" : "inline";
