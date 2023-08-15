@@ -1,0 +1,34 @@
+.carousel-cover
+{
+  margin-left: 1em;
+  margin-right: 1em;
+  overflow: hidden;
+  background: 
+    linear-gradient(
+        to left, 
+        rgba(255, 255, 255, 255) 3%, 
+        rgba(255, 255, 255, 0) 13%,
+        rgba(255, 255, 255, 0) 87%,
+        rgba(255, 255, 255, 255) 97%
+    );
+}
+
+.carousel
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  width: max-content;
+  height: max-content;
+  transition: height 1s;
+  z-index: -1;
+  position: relative;
+  transform: translate(0%, 0%);
+}
+
+.carousel-item 
+{
+    flex-shrink: 0;
+}

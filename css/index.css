@@ -278,36 +278,6 @@
   margin-bottom: 0px;
 }
 
-.project-overflow
-{
-  margin-left: 1em;
-  margin-right: 1em;
-  overflow: hidden;
-  background: 
-    linear-gradient(
-        to left, 
-        rgba(255, 255, 255, 255) 3%, 
-        rgba(255, 255, 255, 0) 13%,
-        rgba(255, 255, 255, 0) 87%,
-        rgba(255, 255, 255, 255) 97%
-    );
-  z-index: initial;
-  position: relative;
-}
-
-.project-box 
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: max-content;
-  height: max-content;
-  z-index: -1;
-  position: relative;
-  transform: translate(-50%, 0%);
-}
-
 .project-frame 
 {
   background-color: rgb(252, 252, 252);
@@ -336,6 +306,7 @@
   margin-left: .25em;
   margin-right: .25em;
   width: 3em;
+  visibility: ;
 }
 
 .canvas-intro {

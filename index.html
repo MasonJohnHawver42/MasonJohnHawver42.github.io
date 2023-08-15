@@ -3,6 +3,7 @@
 	<head>
 
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/carousel.css">
 	<link rel="stylesheet" href="css/calender.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -111,38 +112,40 @@
 			<p class="avoid main-header" style="margin-top: 2em;"> Projects </p>
 			<hr class="avoid main-header-bar">
 
-			<div class="project-overflow" id="overflow">
-				<div id="projects" class="project-box ">
-					<div class="project-frame">
+			<div class="carousel-cover" id="projects2">
+				<div class="carousel"> 
+					<div class="project-frame carousel-item">
 						<p></p> 
 					</div>
-					<div class="project-frame">
+					<div class="project-frame carousel-item">
 						<p style="margin: 1em;"> Project 1</p> 
 					</div>
-					<div class="project-frame">
+					<div class="project-frame carousel-item">
 						<p style="margin: 1em;"> Project 2</p> 
 					</div>
-					<div class="project-frame">
+					<div class="project-frame carousel-item">
 						<p style="margin: 1em;"> Project 3</p> 
 					</div>
-					<div class="project-frame">
+					<div class="project-frame carousel-item">
 						<p style="margin: 1em;"> Project 4</p> 
 					</div>
-					<div class="project-frame">
+					<div class="project-frame carousel-item">
 						<p style="margin: 1em;"> Project 5</p> 
 					</div>
-					<div class="project-frame">
+					<div class="project-frame carousel-item">
 						<p style="margin: 1em;"> Project 6</p> 
 					</div>
-					<div class="project-frame">
+					<div class="project-frame carousel-item">
 						<p></p> 
 					</div>
 				</div>
 			</div>
 
 			<div class = "project-button-box">
-				<button class="project-button fa fa-arrow-left" onclick="projects_moveleft()"> </button>
-				<button class="project-button fa fa-arrow-right" onclick="projects_moveright()"> </button>
+				<button id="projects-left" class="project-button fa fa-arrow-left"> </button>
+				<button id="projects-expand" class="project-button fa fa-arrow-down"> </button>
+				<button id="projects-collapse" class="project-button fa fa-arrow-up"> </button>
+				<button id="projects-right" class="project-button fa fa-arrow-right"> </button>
 			</div>
 
 			<!-- HEADER -->
@@ -158,8 +161,19 @@
 
 	<script src="./js/index.js"></script>
 
+	<script src="./js/carousel.js"></script>
 	<script src="./js/calender.js"></script>
 	<script> 
+		var projects_carousel = new Carousel("projects2", "projects-expand", "projects-collapse", "projects-left", "projects-right", 1, 6);
+
+		function animate() 
+		{
+			projects_carousel.animate(.1);
+			window.requestAnimationFrame(animate);
+		}
+
+		window.requestAnimationFrame(animate);
+
 		github_calender("calendar", "masonjohnhawver42");
 	</script>
 
