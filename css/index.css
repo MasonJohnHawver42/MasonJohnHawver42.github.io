@@ -7,7 +7,8 @@
   --subsubheader-font-size: 1em;
   --subheader-side-font-size: .875em;
   --text-body-font-size: 1em;
-  --info-font-size: .875em;
+  --text-body-sub-font-size: .875em;
+  --info-font-size: 1em;
   --menu-header-font-size: 1.5em;
   --item-font-size: 1em;
 }
@@ -133,23 +134,31 @@
 
 .info 
 {
-  margin-top: .25em;
-  margin-left: 1em;
+  margin-left: 1.5em;
+  margin-top: .5em;
+  color: rgb(58, 58, 58);
+  font-size: var(--info-font-size);
+  font-family: var(--main-font);
+  font-weight: 300;
 }
 
 .info-item 
 {
-  margin: 0px;
-  margin-top: .125em;
+  margin-left: .25px;
+  margin-right: .25px;
+  margin-bottom: .25em;
+  margin-top: .25em;
+  /* margin-top: 1.25em; */
   font-size: var(--info-font-size);
   font-family: var(--main-font);
-  /* color: rgb(92, 164, 231); */
-  font-weight: normal;
+  color: rgb(0, 0, 0);
+  font-weight: 300;
 }
 
 .info-item-link
 {
-  color: rgb(92, 164, 231);
+  color: rgb(0, 132, 255);
+  text-decoration: none;
 }
 
 .main-header 
@@ -182,7 +191,7 @@
 {
   margin: 0px;
   font-size: var(--subheader-font-size);
-  /* font-weight: bold; */
+  font-weight: 400;
   font-family: var(--main-font);
 }
 
@@ -216,7 +225,7 @@
   display: flex; 
   justify-content: space-between; 
   align-items: center;
-  margin-left: 1.0125em;
+  margin-left: 1.125em;
   margin-right: 1em;
   margin-bottom: 2px;
 }
@@ -225,10 +234,11 @@
 {
   color: black; 
   margin: 0px;
+  margin-right: .5em;
   font-size: var(--subsubheader-font-size);
-  /* font-weight: bold; */
+  font-weight: 400;
   font-family: var(--main-font);
-  line-height:1.4;
+  line-height: 1.4;
 }
 
 .main-sub-sub-header-p2 
@@ -238,7 +248,7 @@
   margin: 0px;
   font-size: var(--subsubheader-font-size);
   font-family: var(--main-font);
-  line-height:1.4;
+  line-height: 1.4;
 }
 
 .main-sub-sub-header-icon 
@@ -278,6 +288,16 @@
   margin-bottom: 0px;
 }
 
+.main-fact 
+{
+  font-family: var(--main-font);
+  font-size: var(--text-body-sub-font-size); 
+  color: rgb(58, 58, 58);
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .project-frame 
 {
   background-color: rgb(252, 252, 252);
@@ -306,7 +326,7 @@
   margin-left: .25em;
   margin-right: .25em;
   width: 3em;
-  visibility: ;
+  visibility: inline;
 }
 
 .canvas-intro {

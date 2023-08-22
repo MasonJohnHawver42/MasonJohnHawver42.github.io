@@ -17,7 +17,7 @@
 					<a href="/" class="navbar-header"> Mason Hawver</a>
 					<a href="/" class="navbar-menu-selected"> Home </a>
 					<a href="/project.html" class="navbar-menu-item"> Projects </a>
-					<a href="/misc.html" class="navbar-menu-item"> Misc </a>
+					<a href="/misc.html" class="navbar-menu-item"> Blog </a>
 				</div>
 				<div class="navbar-tag">
 					<a target="_blank" href="https://github.com/MasonJohnHawver42" class="fa fa-github" style="text-decoration: none; font-size:27px; color: black;"> </a>
@@ -32,39 +32,38 @@
 			<!-- </button> -->
 			
 			<!-- HEADER -->
-			<p class="avoid main-header" style="margin-top: 6em;"> About Me </p>
+			<p class="main-header" style="margin-top: 6em;" > About Me </p> 
 			<hr class="avoid main-header-bar">
 	
 			<div class="main-content-box">
 
 				<div>
 					<p class="avoid main-text-body">
-						I'm a results driven Computer Science major with a passion for robotics and a focus on machine learning, computer vision, dynamics, and control. 
-						I write software for robots, game engines, ml/ai models, window managers, websites, and anything else I can get my hands on.
-						I'm interested in graphics programming, hockey, baseball, split keyboards, philosophy, and standup comedy.  
+						I'm an undergraduate student at the University of Minnesota, studying robotics, computer science, and mathematics. I'm broadly interested in advancing the filed of computing, but my passion lies in the field of  robotics. Excluding academics, I love pumping iron, philosophy, computer graphics programming, standup comedy, hip hop, hockey, the hitchhikers guide to the galaxy, my family, my girlfriend, and a mean steak served with corn on the cob.
 					</p>
 
-					<div class="info">
-						<ul style="padding-left: 1em;">
-							<li>
-								<p class = "info-item"> mason.hawver@gmail.com </p>
-							</li>
-							<li>
-								<a class = "info-item info-item-link" target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/">linkedin</a>
-								<a class = "info-item info-item-link" target="_blank" href="https://github.com/MasonJohnHawver42">github</a>
-								<a class = "info-item info-item-link" target="_blank" href="/resume.pdf"> resume </a>
-							</li>
-						</ul>
-					</div>
-<!-- 
-					 <ul class="main-items">
-					  	<li>
-
-						</li>
-					</ul> -->
+					<p style="margin-top: 1em; margin-bottom: 0em; margin-left: .5em;"> 
+						<span class="main-fact" style="font-weight: 400;"> Hometown: </span>
+						<span class="main-fact fa fa-map-o" style="margin-left: .5em;"></span>
+						<span class="main-fact" > Chesterfield, MO </span>
+					</p>
+					<p style="margin-top: .25em; margin-left: .5em; margin-bottom: 0em;"> 
+						<span class="main-fact" style="font-weight: 400;"> Birth place: </span>
+						<span class="main-fact fa fa-map-o" style="margin-left: .5em;"></span>
+						<span class="main-fact" > Brooklyn, NY </span>
+					</p>
 				</div>
-
-				<div id="canvas" class="canvas-intro avoid"> </div>
+				<div> 
+					<div id="canvas" class="canvas-intro avoid"> </div>
+					<div class="info">
+						 
+						<p class = "info-item" > mason.hawver@gmail.com </p>
+						<a class = "info-item info-item-link" target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/">linkedin</a> | 
+						<a class = "info-item info-item-link" target="_blank" href="https://github.com/MasonJohnHawver42">github</a> |
+						<a class = "info-item info-item-link" target="_blank" href="/resume.pdf"> resume </a> 
+						
+					</div>
+				</div>
 			</div>
 
 			<!-- HEADER -->
@@ -88,12 +87,12 @@
 					<em class="main-sub-sub-header-p2"> B.S. in Computer Science, Minor in Mathematics </em>
 				</p>
 				<p style="margin:0px;"> 
-					<!-- <span class="main-sub-sub-header-icon fa fa-map-pin"> </span> -->
+					<span class="main-sub-sub-header-icon fa fa-map-o"> </span>
 					<span class="main-sub-sub-header-p3"> Minneapolis, MN </span>
 				</p>
 			</div>
 
-			<div class="main-sub-sub-header-box" style="margin-top: 10px;">
+			<div class="main-sub-sub-header-box" style="margin-top: .5em;">
 				<p style="margin:0px;">
 					<span class="main-sub-sub-header"> Coursework: </span>
 					<span class="main-sub-sub-header-p2"> Machine Learning, Robotics, Algorithims and Data Structures, Computer Graphics, Differential Equations, Multi-variable Calculus, Statistics, Linear Algebra, Discrete Mathematics, and Funcional Programming</span>
@@ -101,7 +100,7 @@
 				</p>
 			</div>
 
-			<div class="main-sub-sub-header-box">
+			<div class="main-sub-sub-header-box" style="margin-top: .25em;">
 				<p style="margin:0px;">
 					<span class="main-sub-sub-header"> GPA: </span>
 					<span class="main-sub-sub-header-p2"> 4.0 </span>
@@ -154,6 +153,8 @@
 
 			<div id="calendar" style="margin: 1em; margin-top: .75em;"> </div>	
 
+			<img src="https://ghchart.rshah.org/MasonJohnHawver42" alt="Name Your Github chart">
+
 			<br> <br> <br>
 			<hr class="avoid main-header-bar">
 			<i class="fa fa-copyright" style="font-size: 10px;"> MJH 08/17/2004 </i>
@@ -168,7 +169,7 @@
 
 		function animate() 
 		{
-			projects_carousel.animate(.1);
+			projects_carousel.animate(.2);
 			window.requestAnimationFrame(animate);
 		}
 
