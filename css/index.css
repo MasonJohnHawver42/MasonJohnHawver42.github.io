@@ -329,6 +329,12 @@
   visibility: inline;
 }
 
+.skill-grid 
+{
+  display: grid;
+  grid-template-columns: [] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+}
+
 .canvas-intro {
     background-color: white;
 

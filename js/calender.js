@@ -47,12 +47,12 @@ function fetchGitHubContributions(userName)
     return fetch(endpoint, {
         method: "POST",
         headers: {
-        "Authorization": `Bearer ${xyz(abc(magic_nums, def()), 36)}`,
-        "Content-Type": "application/json"
+            "Authorization": `Bearer ${xyz(abc(magic_nums, def()), 36)}`,
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
-        query: query,
-        variables: variables
+            query: query,
+            variables: variables
         })
     })
     .then(response => response.json())
@@ -115,6 +115,7 @@ function github_calender(id, user_name)
                     day.classList.add('calender-day');
                     day.style.backgroundColor = colors[index].background;
                     day.style.borderColor = colors[index].border;
+                    day.style.borderStyle = "solid"
                 }
 
                 row.appendChild(day)
