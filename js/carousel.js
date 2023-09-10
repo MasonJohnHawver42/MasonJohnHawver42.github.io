@@ -54,7 +54,8 @@ const Carousel = class
 
         for (var i = 0; i < this.children.length; i++) 
         {
-            this.children[i].style.display = (i >= this.min_index && i <= this.max_index) ? "block" : "none";
+            console.log((i >= this.min_index && i <= this.max_index));
+            this.children[i].style.display = (i >= this.min_index && i <= this.max_index) ? "grid" : "none";
         }
 
         this.state = true;
@@ -76,7 +77,7 @@ const Carousel = class
 
         for (var i = 0; i < this.children.length; i++) 
         {
-            this.children[i].style.display = "block";
+            this.children[i].style.display = "grid";
         }
 
         this.state = false;

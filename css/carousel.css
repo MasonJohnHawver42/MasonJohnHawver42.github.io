@@ -23,7 +23,7 @@
   width: max-content;
   height: max-content;
   transition: height 1s;
-  z-index: -1;
+  /* z-index: -1; */
   position: relative;
   transform: translate(0%, 0%);
 }
@@ -31,4 +31,5 @@
 .carousel-item 
 {
     flex-shrink: 0;
+    display: grid;
 }

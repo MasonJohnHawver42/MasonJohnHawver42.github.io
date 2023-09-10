@@ -25,6 +25,7 @@
   border-color: #e7e7e7;
 
   overflow: hidden;
+  z-index: 1000;
 
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -304,11 +305,63 @@
 
   width: 42em;
   height: 21em;
+  min-height: 21em;
+
+  display: grid;
+  grid-template-columns: 1em 27em 13em 1em;
+  grid-template-rows: min-content auto min-content;
+  grid-template-areas: 
+    ". header header ."
+    ". main sidebar ."
+    ". main links .";
 
   border: 1px solid #bebebe;
   border-radius: 1px;
   overflow: hidden;
   margin: .5em;
+
+}
+
+.project-header 
+{
+  font-size: var(--header-font-size);
+  font-family: var(--main-font);
+  grid-area: header;
+  margin: 1em;
+  margin-left: 0em;
+  margin-bottom: .5em;
+}
+
+.project-content 
+{
+  grid-area: main;
+  object-fit: fill;
+  height: calc(100% - 1em);
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.project-text 
+{
+  grid-area: sidebar;
+  margin: 1em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-right: 0em;
+  font-size: .875em;
+  font-family: var(--main-font);
+  font-weight: 300;
+}
+
+.project-links 
+{
+  grid-area: links;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: .5em;
+  font-size: var(--text-body-font-size);
+  font-family: var(--main-font);
 }
 
 .project-button-box
@@ -333,6 +386,21 @@
 {
   display: grid;
   grid-template-columns: [] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+}
+
+.headshot 
+{
+  flex-basis: 50%;
+  max-width: 300px;
+  min-width: 200px;
+
+  margin-left: 20px;
+
+  height: 200px;
+  object-fit: cover;
+
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
 }
 
 .canvas-intro {
