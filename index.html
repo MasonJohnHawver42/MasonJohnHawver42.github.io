@@ -118,8 +118,41 @@
 						<p></p> 
 					</div>
 					<div class="project-frame carousel-item">
-						<p class="project-header"> Genentic Learning Cars</p>
+						<p class="project-header"> 
+							<span> Object Detection with Faster R-CNNs </span> 
+							<span style="font-weight: 300; font-size: .75em; margin-left: .25em;"> | Python and Pytorch </span> 
+						</p>
 						
+						<img src="assets/props_detection.gif" class="project-content"> </img>
+
+						<p class="project-text"> Implemented a Faster R-CNN network for object detection, and trained it on PROPS achieving a 20\% mAP score. Utilized transfer learning by using RegNetX-400MF to speed up training time to only 3 hours. Calculated and implemented all forward and backwards steps for back-propagation by hand. </p>
+						
+						<p class="project-links"> 
+							<a style="margin:0em; margin-right:0em;" href="https://github.com/MasonJohnHawver42/DeepRob">Source Code</a>
+							<!-- <a class="project-links" href="https://github.com/ker2x">Contributors</a> -->
+						</p>
+					</div>
+					<div class="project-frame carousel-item">
+						<p class="project-header"> 
+							<span> Personel Game Engine </span> 
+							<span style="font-weight: 300; font-size: .75em; margin-left: .25em;"> | C++, C, Lua, GLSL, and Opengl4.3 </span> 
+						</p>
+						
+						<img src="assets/galaga.png" class="project-content"> </img>
+
+						<p class="project-text"> Designed a stateless rendering API to efficiently offload gpu calls to a rendering thread, achieving 2X performance. Utilized a Entity Component System to reduce cache misses, achieving 10X performance and enabling flexibility. Crafted a Graphical Interface for performance profiling, debugging, and simulation editing.  </p>
+						
+						<p class="project-links"> 
+							<a style="margin:0em; margin-right:0em;" href="https://github.com/MasonJohnHawver42/DeepRob">Source Code</a>
+							<!-- <a class="project-links" href="https://github.com/ker2x">Contributors</a> -->
+						</p>
+					</div>
+					<div class="project-frame carousel-item">						
+						<p class="project-header"> 
+							<span> Genentic Learning for Self Driving Cars </span> 
+							<span style="font-weight: 300; font-size: .75em; margin-left: .25em;"> | Python, Numpy, and Pygame </span> 
+						</p>
+
 						<iframe class="project-content" width="560" height="315" src="https://www.youtube.com/embed/rklWAOirpQ4?si=Km69b5aVDqfB5GTX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 						<p class="project-text"> Created a 2D automobile physics simulation, and a procedural track to mimic real-world driving conditions. Implemented genetic learning to train a shallow neural network to drive autonomously within the simulation. Designed a fitness function that rewarded efficient and safe driving behavior, resulting in improved performance. </p>
@@ -129,21 +162,6 @@
 							<!-- <a class="project-links" href="https://github.com/ker2x">Contributors</a> -->
 						</p>
 						
-					</div>
-					<div class="project-frame carousel-item">
-						<p class="project-header"> todo </p>
-					</div>
-					<div class="project-frame carousel-item">
-						<p class="project-header"> todo </p>
-					</div>
-					<div class="project-frame carousel-item">
-						<p class="project-header"> todo </p>
-					</div>
-					<div class="project-frame carousel-item">
-						<p class="project-header"> todo </p>
-					</div>
-					<div class="project-frame carousel-item">
-						<p class="project-header"> todo </p> 
 					</div>
 					<div class="project-frame carousel-item">
 						<p></p> 
@@ -183,7 +201,7 @@
 	<script src="./js/carousel.js"></script>
 	<script src="./js/calender.js"></script>
 	<script> 
-		var projects_carousel = new Carousel("projects2", "projects-expand", "projects-collapse", "projects-left", "projects-right", 1, 6);
+		var projects_carousel = new Carousel("projects2", "projects-expand", "projects-collapse", "projects-left", "projects-right", 1, 3);
 
 		function animate() 
 		{
