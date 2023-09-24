@@ -19,8 +19,13 @@ function def() {
 function fetchGitHubContributions(userName) 
 {
     const endpoint = "https://api.github.com/graphql";
-    const magic_nums = [1107n, 1542n, 1369n, 119n, 1307n, 2570n, 368n, 1859n, 1627n, 2159n, 538n, 2923n, 2185n, 2790n, 99n, 1313n, 281n, 281n, 1345n, 2235n, 2718n, 1962n, 99n, 2185n, 2271n, 28n, 690n, 2718n, 1830n, 1962n, 2170n, 487n, 3165n, 2271n, 2906n, 2160n, 641n, 1627n, 2578n, 2923n]
+    // const magic_nums = [1107n, 1542n, 1369n, 119n, 1307n, 2570n, 368n, 1859n, 1627n, 2159n, 538n, 2923n, 2185n, 2790n, 99n, 1313n, 281n, 281n, 1345n, 2235n, 2718n, 1962n, 99n, 2185n, 2271n, 28n, 690n, 2718n, 1830n, 1962n, 2170n, 487n, 3165n, 2271n, 2906n, 2160n, 641n, 1627n, 2578n, 2923n]
 
+    const b = "1EzCO2aZDZ3K0Av17rcH6"
+    const a = "ghp_H4isNEmyGScPGNf"
+    const key = a + b;
+
+    console.log("key")
 
     const query = `
         query($userName:String!) { 
@@ -47,7 +52,7 @@ function fetchGitHubContributions(userName)
     return fetch(endpoint, {
         method: "POST",
         headers: {
-            "Authorization": `Bearer ${xyz(abc(magic_nums, def()), 36)}`,
+            "Authorization": `Bearer ${key}`,
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
@@ -92,6 +97,8 @@ const colors =
 function github_calender(id, user_name) 
 {
     const calender = document.getElementById(id);
+
+    console.log("calender")
 
     fetchGitHubContributions(user_name).then(response => {
         console.log("Response data:", response);
