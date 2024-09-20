@@ -22,14 +22,12 @@
 				<div class="navbar-tag">
 					<a target="_blank" href="https://github.com/MasonJohnHawver42" class="fa fa-github" style="text-decoration: none; font-size:27px; color: black;"> </a>
 					<a target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/" class="fa fa-linkedin-square" style="text-decoration: none; font-size:27px; color: black;"> </a>
-					<a target="_blank" href="/resume.pdf" class="fa fa-file-pdf-o" style="text-decoration: none; font-size:23px; color: black; position: relative; bottom: 1px; margin-left: 1px;"> </a>
+					<a target="_blank" href="/Mason_Hawver_Resume.pdf" class="fa fa-file-pdf-o" style="text-decoration: none; font-size:23px; color: black; position: relative; bottom: 1px; margin-left: 1px;"> </a>
 				</div>
 			</div>
 		</div>
 
 		<div class="main">
-			<!-- <button onclick="loadScript('js/again_boids.js')" style="float: right;margin-top: 33px;" class = "avoid"> 	fish_bowl  -->
-			<!-- </button> -->
 			
 			<!-- HEADER -->
 			<p class="main-header" style="margin-top: 6em;" > About Me </p> 
@@ -39,10 +37,30 @@
 
 				<div>
 					<p class="avoid main-text-body">
-						I'm an undergraduate student at the University of Minnesota, studying robotics, computer science, and mathematics. I'm broadly interested in advancing the filed of computing, but my passion lies in the field of robotics. Excluding academics, I love my family, my girlfriend, pumping iron, philosophy, computer graphics programming, standup comedy, hip hop, hockey, the hitchhikers guide to the galaxy, and a mean steak served with corn on the cob. 
+						I'm an undergraduate at the University of Minnesota, studying Robotics, Computer Science, and Mathematics.
+ 						I value these five pillars in life: Family, Finance, Philosophy, Fitness, and Decision Making. 
+ 						I love my Family. I'm looking for a Job where I can add value and gain it back too. I'm an avid Stoic. I currently Bench 185lbs, Squat 315lbs, and play pick-up Soccer. And decisions have made me who I'm today.
+					</p>
+					<br>
+
+					<p class="avoid main-sub-sub-header">
+						Contact:
 					</p>
 
-					<p style="margin-top: 1em; margin-bottom: 0em; margin-left: .5em;"> 
+					<div class="info">
+						 
+						<p class = "info-item" > mason.hawver@gmail.com </p>
+						<a class = "info-item info-item-link" target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/">linkedin</a> | 
+						<a class = "info-item info-item-link" target="_blank" href="https://github.com/MasonJohnHawver42">github</a> |
+						<a class = "info-item info-item-link" target="_blank" href="/Mason_Hawver_Resume.pdf"> resume </a> 
+						
+					</div>
+
+					<br>
+
+					<button id="toggleSimulationButton" class="avoid">Start Fishtank</button>
+
+					<!-- <p style="margin-top: 1em; margin-bottom: 0em; margin-left: .5em;"> 
 						<span class="main-fact" style="font-weight: 400;"> Hometown: </span>
 						<span class="main-fact fa fa-map-o" style="margin-left: .5em;"></span>
 						<span class="main-fact" > Chesterfield, MO </span>
@@ -51,19 +69,10 @@
 						<span class="main-fact" style="font-weight: 400;"> Birth place: </span>
 						<span class="main-fact fa fa-map-o" style="margin-left: .5em;"></span>
 						<span class="main-fact" > Brooklyn, NY </span>
-					</p>
+					</p> -->
 				</div>
-				<div>
-					<img src="assets/headshot.JPG" class="headshot"> </img>
-					<!-- <div id="canvas" class="canvas-intro avoid"> </div> -->
-					<div class="info">
-						 
-						<p class = "info-item" > mason.hawver@gmail.com </p>
-						<a class = "info-item info-item-link" target="_blank" href="https://www.linkedin.com/in/mason-hawver-4bb991255/">linkedin</a> | 
-						<a class = "info-item info-item-link" target="_blank" href="https://github.com/MasonJohnHawver42">github</a> |
-						<a class = "info-item info-item-link" target="_blank" href="/resume.pdf"> resume </a> 
-						
-					</div>
+				<div style="margin-left: 30px; flex-basis: 100%; max-width: 250px; min-width: 100px;">
+					<img src="assets/headshot.JPG" class="headshot avoid"> </img>
 				</div>
 			</div>
 
@@ -85,7 +94,7 @@
 			<div class="main-sub-sub-header-box">
 				<p style="margin:0px;">
 					<!-- <span class="main-sub-sub-header"> School Name </span>  -->
-					<em class="main-sub-sub-header-p2"> B.S. in Computer Science, Minor in Mathematics </em>
+					<em class="main-sub-sub-header-p2"> Bachelor of Science in Computer Science, Minor in Mathematics </em>
 				</p>
 				<p style="margin:0px;"> 
 					<span class="main-sub-sub-header-icon fa fa-map-o"> </span>
@@ -93,28 +102,202 @@
 				</p>
 			</div>
 
-			<div class="main-sub-sub-header-box" style="margin-top: .5em;">
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
 				<p style="margin:0px;">
-					<span class="main-sub-sub-header"> Coursework: </span>
-					<span class="main-sub-sub-header-p2"> Machine Learning, Robotics, Algorithms and Data Structures, Computer Graphics, Differential Equations, Multi-variable Calculus, Statistics, Linear Algebra, Discrete Mathematics, and Functional Programming</span>
+					<span class="main-sub-sub-header"> Selected Coursework: 
+						<span class="main-sub-sub-header-p2"> Deep Learning For Robotics, Computer Vision, Real Time Embedded Systems, Computer Graphics, Optimal Filtering/Control, Algorithms and Data Structures, Real Analysis, and Differential Equations. </span>
+					</span>
+					
 					<!-- <span class="main-sub-sub-header-p2"> CSCI 5521 Machine Learning, CSCI 5551 Robotics I, CSCI 5607 Computer Graphics I, CSCI 4041 Algorithims and Data Structures, CSCI 2021 Machine Architecture, CSCI 2041 Functional Programming, MATH 2373 Diferential Equations, MATH 2374 Multivariable Calculus, STAT 3021 Probility and Statistics, CSCI 2033 Linear Algebra, and CSCI 2011 Discrete Mathematics </span> -->
 				</p>
 			</div>
 
-			<div class="main-sub-sub-header-box" style="margin-top: .25em;">
+			<div class="main-sub-sub-post-header-box" style="margin-top: .25em;">
 				<p style="margin:0px;">
-					<span class="main-sub-sub-header"> GPA: </span>
-					<span class="main-sub-sub-header-p2"> 4.0 </span>
+					<span class="main-sub-sub-header"> GPA: 4.0 | <span class="main-sub-sub-header"> Transcript: <a class = "info-item info-item-link" target="_blank" href="/Mason_Hawver_Transcript.pdf"> Unofficial </a>  </span></span>		
 				</p>
 			</div>
 
 			<!-- HEADER -->
-			<p class="avoid main-header" style="margin-top: 2em;"> Hackathons </p>
+			<p class="avoid main-header" style="margin-top: 1em;"> Work Experience </p>
 			<hr class="avoid main-header-bar">
 
 			<div class="main-sub-header-box">
 				<p style="margin:0px;">
-					<span class="main-sub-header">University of Iowa HackU: </span> 
+					<span class="main-sub-header">Software Engineering Intern</span> 
+					<span class="main-sub-header-p2"></span>
+				</p>
+				<p style="margin:0px;"> 
+					<span class="main-sub-header-icon fa fa-calendar"> </span>
+					<span class="main-sub-header-p3"> May 2024 - August 2024 </span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-header-box">
+				<p style="margin:0px;">
+					<!-- <span class="main-sub-sub-header"> School Name </span>  -->
+					<em class="main-sub-sub-header-p2"> RTX, Collins Aerospace, Mission Systems, Embedded Low-Level Systems and Software </em>
+				</p>
+				<p style="margin:0px;"> 
+					<span class="main-sub-sub-header-icon fa fa-map-o"> </span>
+					<span class="main-sub-sub-header-p3"> Cedar Rapids, IA </span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Accomplishments: 
+						<span class="main-sub-sub-header-p2">  Implemented fixes for 4 major and 6 minor bugs and developed 9 new features on a production
+							team, 3x the expected total of 6 tickets. </span>
+					</span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+						<span class="main-sub-sub-header-p2">  Presented the Q3 Plan for the RCU Team to the Mission Systems Directorate, addressing over 200 people, and became
+							the first intern to achieve this. </span>
+				</p>
+			</div>
+			
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Skills Gained: 
+						<span class="main-sub-sub-header-p2">  Embedded Systems Development, Working in Secret Labs, Agile Development, and Computer Networking. </span>
+					</span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Development Platforms: 
+						<span class="main-sub-sub-header-p2">  The half-sized and full-sized Domestic Radio Control Unit for the ARC-210 Radio and the
+							half-sized International Radio Control Unit for the AR-1500 Radio. </span>
+					</span>
+				</p>
+			</div>
+			
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+						<span class="main-sub-sub-header-p2"> These platforms serviced many aircraft including the F/A-18 Hornet, F-15 Eagle, Air Force One, A-10 Warthog, C-17
+							Globemaster III, C-130 Hercules, V-22 Osprey, MQ-25, E-3 Sentry AWACS, HH-60 Pave Hawk, and many more. </span>
+				</p>
+			</div>
+
+
+			<!-- HEADER -->
+			<p class="avoid main-header" style="margin-top: 1em;"> Academic Experience </p>
+			<hr class="avoid main-header-bar">
+
+			<div class="main-sub-header-box">
+				<p style="margin:0px;">
+					<span class="main-sub-header">Teaching Assistant, Computer Vision</span> 
+					<span class="main-sub-header-p2"></span>
+				</p>
+				<p style="margin:0px;"> 
+					<span class="main-sub-header-icon fa fa-calendar"> </span>
+					<span class="main-sub-header-p3"> August 2024 - Present </span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-header-box">
+				<p style="margin:0px;">
+					<!-- <span class="main-sub-sub-header"> School Name </span>  -->
+					<em class="main-sub-sub-header-p2"> University of Minnesota, College of Science and Engineering, Prof. Volkan Isler </em>
+				</p>
+				<p style="margin:0px;"> 
+					<span class="main-sub-sub-header-icon fa fa-map-o"> </span>
+					<span class="main-sub-sub-header-p3"> Minneapolis, MN </span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Accomplishments: 
+						<span class="main-sub-sub-header-p2">  Designed homework, teaching students back-projection, homographys, RANSAC, stereo depth
+							estimation, feature engineering, image filtering, SVM classifiers, and convolutional neural networks. </span>
+					</span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+						<span class="main-sub-sub-header-p2"> Developed an auto-grading system, improving efficiency by 7x. </span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Skills Gained: 
+						<span class="main-sub-sub-header-p2">  Technical Communication and a Deep Understanding of Core Computer Vision Concepts. </span>
+					</span>
+				</p>
+			</div>
+
+			<br>
+
+			<div class="main-sub-header-box">
+				<p style="margin:0px;">
+					<span class="main-sub-header">Undergraduate Robotics Researcher</span> 
+					<span class="main-sub-header-p2"></span>
+				</p>
+				<p style="margin:0px;"> 
+					<span class="main-sub-header-icon fa fa-calendar"> </span>
+					<span class="main-sub-header-p3"> September 2023 - Present </span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-header-box">
+				<p style="margin:0px;">
+					<!-- <span class="main-sub-sub-header"> School Name </span>  -->
+					<em class="main-sub-sub-header-p2"> Robotics Perception and Manipulation Lab, Prof. Karthik Desingh </em>
+				</p>
+				<p style="margin:0px;"> 
+					<span class="main-sub-sub-header-icon fa fa-map-o"> </span>
+					<span class="main-sub-sub-header-p3"> Minneapolis, MN </span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em; margin-left: 2em;">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Accomplishments: 
+						<span class="main-sub-sub-header-p2">  Trained vision encoders using self-supervised learning for efficient imitation learning, applied to
+							robotic arm policies in both simulation and on real hardware - UR5e Robotic Arm. </span>
+					</span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+						<span class="main-sub-sub-header-p2"> Currently evaluating pre-training methods with different image modalities to advance the field of pretraining. </span>
+				</p>
+			</div>
+
+			<div class="main-sub-sub-post-header-box" style="margin-top: .5em;">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Skills Gained: 
+						<span class="main-sub-sub-header-p2">  Self-Supervised Learning, Dataset Creation, Benchmarking, and Imitation Learning for Robotics. </span>
+					</span>
+				</p>
+			</div>
+
+			<!-- HEADER -->
+			<p class="avoid main-header" style="margin-top: 1em;"> Awards </p>
+			<hr class="avoid main-header-bar">
+
+			<div class="main-sub-header-box">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Undergraduate Research Opportunity Scholarship </span> 
+				</p>
+				<p style="margin:0px;"> 
+					<span class="main-sub-header-icon fa fa-calendar"> </span>
+					<span class="main-sub-header-p3"> August 2024 - Present </span>
+				</p>
+			</div>
+
+			<div class="main-sub-header-box">
+				<p style="margin:0px;">
+					<span class="main-sub-sub-header"> Placed #1 at HackUIowa 2023:  </span> 
 					<a href="http://masonhawver.com/IowaHackSocialNetwork/" class="main-sub-header-p2">GitConnect</a>
 					<a href="https://devpost.com/software/git-social-network/" class="main-sub-header-p2">Devpost</a>
 				</p>
@@ -125,7 +308,7 @@
 			</div>
 
 			<!-- HEADER -->
-			<p class="avoid main-header" style="margin-top: 2em;"> Projects </p>
+			<p class="avoid main-header" style="margin-top: 1em;"> Projects </p>
 			<hr class="avoid main-header-bar">
 
 			<div class="carousel-cover" id="projects2">
@@ -163,13 +346,13 @@
 					</div>
 					<div class="project-frame carousel-item">
 						<p class="project-header"> 
-							<span> Personal Game Engine </span> 
-							<span style="font-weight: 300; font-size: .75em; margin-left: .25em;"> | C++, C, Lua, GLSL, and Opengl4.3 </span> 
+							<span> Rendering Engine </span> 
+							<span style="font-weight: 300; font-size: .75em; margin-left: .25em;"> | C++, GLSL, and Opengl4.3 </span> 
 						</p>
 						
-						<img src="assets/galaga.png" class="project-content"> </img>
+						<img src="assets/sponzarender0.png" class="project-content"> </img>
 
-						<p class="project-text"> Designed a stateless rendering API to efficiently offload gpu calls to a rendering thread, achieving 2X performance. Utilized a Entity Component System to reduce cache misses, achieving 10X performance and enabling flexibility. Crafted a Graphical Interface for performance profiling, debugging, and simulation editing.  </p>
+						<p class="project-text"> todo </p>
 						
 						<p class="project-links"> 
 							<a style="margin:0em; margin-right:0em;" href="https://github.com/MasonJohnHawver42/Galaga">Source Code</a>
@@ -270,8 +453,8 @@
 		github_calender("calendar", "masonjohnhawver42");
 	</script>
 
-	<!-- <script src="./js/three.js"></script> -->
-	<!-- <script src="./js/again_boids.js"></script> -->
+	<script src="./js/three.js"></script>
+	<script src="./js/again_boids.js"></script>
 	<!-- <script src="./js/portrait.js"></script> -->
 
 </html>

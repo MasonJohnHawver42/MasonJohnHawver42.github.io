@@ -135,8 +135,8 @@
 
 .info 
 {
-  margin-left: 1.5em;
-  margin-top: .5em;
+  margin-left: .5em;
+  /* margin-top: .5em; */
   color: rgb(58, 58, 58);
   font-size: var(--info-font-size);
   font-family: var(--main-font);
@@ -227,6 +227,16 @@
   justify-content: space-between; 
   align-items: center;
   margin-left: 1.125em;
+  margin-right: 1em;
+  margin-bottom: 2px;
+}
+
+.main-sub-sub-post-header-box 
+{
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  margin-left: 2em;
   margin-right: 1em;
   margin-bottom: 2px;
 }
@@ -393,13 +403,13 @@
 
 .headshot 
 {
-  flex-basis: 50%;
-  max-width: 300px;
+  width: 100%;
+  /* max-width: 1000px;
   min-width: 200px;
 
-  margin-left: 20px;
 
-  height: 200px;
+  max-height: 1000px;
+  min-height: 200px; */
   object-fit: cover;
 
   border: 1px solid #b1b1b1;

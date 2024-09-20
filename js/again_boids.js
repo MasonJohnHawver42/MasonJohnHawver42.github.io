@@ -1,9 +1,11 @@
+let isSimulationRunning = false;  // Initially, the simulation is stopped
+let animationFrameId;  // To store the requestAnimationFrame ID
 
 let BoidContainer = document.getElementById('canvas-boids');
 
 let BoidSettings = 
 {
-	boid_count: 300,
+	boid_count: 50,
 	debug: false,
 
 	sep_distance: 40,
@@ -12,7 +14,7 @@ let BoidSettings =
 	avd_distance: 150,
 
 	fov: 90,
-	rays: 500,
+	rays: 250,
 
 	size: 7,
 
@@ -20,11 +22,11 @@ let BoidSettings =
 	min_speed: 0,
  	max_speed: 220,
 
- 	sep_power: 2,
+ 	sep_power: 4,
  	coh_power: 1,
  	ali_power: 3,
  	cnt_power: 10,
- 	avd_power: 30,
+ 	avd_power: 15,
 
  	camera_distance: 4000,
  	depth: 200,
@@ -317,8 +319,6 @@ let environment =
 let flock = 
 {
 	boids: [],
-
-
 	clock: new THREE.Clock(),
 
 	init: function(count) 
@@ -331,10 +331,14 @@ let flock =
 
 	update: function(dt) 
 	{
+		if (!isSimulationRunning) return;
+
 		this.boids.forEach((boid, i) => 
 		{
 
 			let inside = BoidContainer.boids_box.inside(boid.pos)
+
+			console.log("update")
 
 			if (inside) 
 			{
@@ -421,7 +425,6 @@ let ray_meshes = []
 
 if (BoidSettings.debug) 
 {
-
 	BoidUtill.ray_dirs.forEach((point, i) => {
 	  pnt_mesh = new THREE.Mesh(BoidUtill.boid_geometry, i<  10 ? BoidUtill.debug_material : BoidUtill.boid_material);
 	  pnt_mesh.position.copy(point)
@@ -439,61 +442,85 @@ console.log(BoidContainer)
 
 function animate_boids() 
 {
-	requestAnimationFrame(animate_boids);
-
 	let dt = flock.clock.getDelta();
-
-	environment.items.forEach((item, i) => environment.update(item))
-
-	flock.update(dt)
-
-	if (BoidSettings.debug) 
+	dt = Math.min(dt, .1);
+	
+	if (isSimulationRunning) 
 	{
-		let debug_boid = flock.boids[0]
 
-		let rot_axis = new THREE.Vector3().crossVectors(BoidUtill.ray_dirs[0], debug_boid.dir)
-		let angle = BoidUtill.ray_dirs[0].angleTo(debug_boid.dir)
-
-		let avd_dir = debug_boid.avoidence_rays(environment.obs, true)
-
-		ray_meshes.forEach((mesh, i) => 
+		animationFrameId = requestAnimationFrame( animate );
+		
+		environment.items.forEach((item, i) => environment.update(item))
+		
+		flock.update(dt)
+		
+		if (BoidSettings.debug) 
 		{
-
-			let dir = new THREE.Vector3().copy(BoidUtill.ray_dirs[i])
-			dir.applyAxisAngle(rot_axis, angle)
-			dir.normalize();
-
-			let invdir = new THREE.Vector3(1 / dir.x, 1 / dir.y, 1 / dir.z);
-			let sign = [ (invdir.x < 0) ? 1 : 0, (invdir.y < 0) ? 1 : 0, (invdir.z < 0) ? 1 : 0 ];
-
-			let res = [false, -1]//BoidContainer.boids_box.intersect(debug_boid.pos, dir, invdir, sign)
-			environment.obs.forEach((aa_box, i) => 
+			let debug_boid = flock.boids[0]
+			
+			let rot_axis = new THREE.Vector3().crossVectors(BoidUtill.ray_dirs[0], debug_boid.dir)
+			let angle = BoidUtill.ray_dirs[0].angleTo(debug_boid.dir)
+			
+			let avd_dir = debug_boid.avoidence_rays(environment.obs, true)
+			
+			ray_meshes.forEach((mesh, i) => 
 			{
-				let res_1 = aa_box.intersect(debug_boid.pos, dir, invdir, sign)
-				res[0] = res[0] || res_1[0]
-				if (res_1[0] && (res_1[1] < res[1] || res[1] == -1)) { res[1] = res_1[1]; }
+
+				let dir = new THREE.Vector3().copy(BoidUtill.ray_dirs[i])
+				dir.applyAxisAngle(rot_axis, angle)
+				dir.normalize();
+				
+				let invdir = new THREE.Vector3(1 / dir.x, 1 / dir.y, 1 / dir.z);
+				let sign = [ (invdir.x < 0) ? 1 : 0, (invdir.y < 0) ? 1 : 0, (invdir.z < 0) ? 1 : 0 ];
+				
+				let res = [false, -1]//BoidContainer.boids_box.intersect(debug_boid.pos, dir, invdir, sign)
+				environment.obs.forEach((aa_box, i) => 
+				{
+					let res_1 = aa_box.intersect(debug_boid.pos, dir, invdir, sign)
+					res[0] = res[0] || res_1[0]
+					if (res_1[0] && (res_1[1] < res[1] || res[1] == -1)) { res[1] = res_1[1]; }
+				});
+				
+				if (i > avd_dir) { mesh.material = BoidUtill.boid_material; }
+				if (i == avd_dir) { mesh.material = BoidUtill.debug2_material; }
+				if (i < avd_dir) { mesh.material = BoidUtill.invs_material; }
+				
+				if (i == 0) { mesh.material = BoidUtill.debug_material; }
+				
+				mesh.position.copy(BoidUtill.ray_dirs[i])
+				mesh.position.applyAxisAngle(rot_axis, angle)
+				mesh.position.setLength((avd_dir == i ? 1.3 : 1) * BoidSettings.avd_distance)
+				let size = (avd_dir == i ? 2 : 1) * (i - ray_meshes.length) * (10 / ray_meshes.length)
+				mesh.scale.set(size, size, size)
+				mesh.lookAt(camera_boids.position)
+				mesh.position.add(debug_boid.pos)
 			});
-
-			if (i > avd_dir) { mesh.material = BoidUtill.boid_material; }
-			if (i == avd_dir) { mesh.material = BoidUtill.debug2_material; }
-			if (i < avd_dir) { mesh.material = BoidUtill.invs_material; }
-
-			if (i == 0) { mesh.material = BoidUtill.debug_material; }
-
-			mesh.position.copy(BoidUtill.ray_dirs[i])
-			mesh.position.applyAxisAngle(rot_axis, angle)
-			mesh.position.setLength((avd_dir == i ? 1.3 : 1) * BoidSettings.avd_distance)
-			let size = (avd_dir == i ? 2 : 1) * (i - ray_meshes.length) * (10 / ray_meshes.length)
-	  		mesh.scale.set(size, size, size)
-	  		mesh.lookAt(camera_boids.position)
-	  		mesh.position.add(debug_boid.pos)
-		});
+		}
+		
+		BoidUtill.update_camera(camera_boids)
+		BoidUtill.update_renderer(renderer_boids)
+		
+		renderer_boids.render( scene_boids, camera_boids );
 	}
-
-	BoidUtill.update_camera(camera_boids)
-	BoidUtill.update_renderer(renderer_boids)
-
-	renderer_boids.render( scene_boids, camera_boids );
 }
 
-animate_boids();
+function startSimulation() {
+    isSimulationRunning = true;
+	renderer_boids.setAnimationLoop( animate_boids );
+}
+
+function stopSimulation() {
+    isSimulationRunning = false;
+	cancelAnimationFrame( animationFrameId );
+    renderer_boids.clear()
+}
+
+document.getElementById('toggleSimulationButton').addEventListener('click', () => {
+    if (isSimulationRunning) {
+        stopSimulation();
+        document.getElementById('toggleSimulationButton').textContent = 'Start Fishtank';
+    } else {
+        startSimulation();
+        document.getElementById('toggleSimulationButton').textContent = 'Stop Fishtank';
+    }
+});
