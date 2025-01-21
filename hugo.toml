@@ -1,0 +1,4 @@
+baseURL = 'https://masonhawver.com/'
+languageCode = 'en-us'
+title = 'mason hawver'
+theme = 'ananke'
