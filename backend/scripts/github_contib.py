@@ -12,15 +12,6 @@ API_URL = "https://api.github.com/graphql"
 TOKEN = os.getenv("GITHUB_TOKEN")  # Replace with your GitHub personal access token
 USERNAME = "masonjohnhawver42"  # Replace with your GitHub username
 
-end_date = date.today()
-start_date = end_date - timedelta(weeks=52)
-
-# Format the start and end dates in ISO format
-start_date_str = start_date.isoformat()
-end_date_str = end_date.isoformat()
-
-print(end_date_str)
-
 # Query to fetch contribution calendar
 QUERY = f"""
 query {{
@@ -39,8 +30,6 @@ query {{
 }}
 """
 
-print(QUERY)
-
 def fetch_contribution_data():
     """Fetch contribution data from GitHub GraphQL API."""
     headers = {"Authorization": f"Bearer {TOKEN}"}
@@ -48,13 +37,13 @@ def fetch_contribution_data():
     if response.status_code != 200:
         raise Exception(f"Query failed: {response.status_code}, {response.text}")
     data = response.json()
-    print(data)
     return data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
 
 def generate_html(weeks):
     """Generate an HTML grid for the contribution calendar."""
     n = 1
     today = datetime.now()
+    print(today)
     start_date = today - timedelta(days=today.weekday())
     start_date = start_date - timedelta(weeks=52 * n - 1)
     date_to_contributions = {}
@@ -134,7 +123,7 @@ def generate_html(weeks):
         html.append("</div>")  # End of row
 
     html.append("</div></div>")
-    html.append('<div id="info" style="margin-top: 20px;"></div>')  # Show clicked cell info here
+    html.append('<div id="info" style="margin-top: 0px;"></div>')  # Show clicked cell info here
     html.append("</body></html>")
     return "\n".join(html)
 
@@ -153,8 +142,6 @@ def main():
     print("Fetching GitHub contribution data...")
     calendar_data = fetch_contribution_data()
     weeks = calendar_data["weeks"]
-
-    print (weeks)
 
     print("Generating HTML contribution grid...")
     html = generate_html(weeks)
