@@ -1,27 +1,27 @@
 {{ define "main" }}
 
-<h1>About</h1>
+<h1>About Me</h1>
 
-<p>
-Console is a minimal, responsive and light theme for Hugo inspired by Linux console.  <a href="about/">(more)</a>
-</p>
-<br/>
+<div style="display: flex; flex-direction: row; justify-content: flex-start; align-items: baseline;">
 
-<h1>Latest posts</h1>
+    <div style="flex-grow: 1; padding-right: 20px; text-align: justify;">
+        <p>
+            Howdy, welcome to my corner of the internet. Where I document the things I’ve built, broken, and occasionally fixed while incorrectly assuming I knew what was going on the whole time. This blog isn’t so much a carefully curated collection of wisdom as it is a curious, haphazardly assembled set of projects, conquests, and fumbles made through my journey as student, engineer, and an editor of the hitch hikers guide to the galaxy. 
+        </p>
 
-<div class="posts-list">
-{{ with .Site.GetPage "/posts" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
-        <div class="post">
-            <p>
-                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
-            </p>
-        </div>    
-    {{ end }}
-{{ end }}
+        <p>
+            So, if you’re looking for answers to life’s biggest questions, I can’t promise those. But if you’re here for something a little more chaotic, you’ve definitely found the right spot. And if you find something perplexing along the way? Don’t panic. That’s just part of the ride.
+        </p>
+        <a style="align-self: left;" href="about/">(more)</a>
+    </div>
+
+    <div>
+        {{ partial "ascii-art.html" . }}
+    </div>
+
 </div>
+
+<br/>
 
 <h1>Latest photos</h1>
 
@@ -42,5 +42,21 @@ Console is a minimal, responsive and light theme for Hugo inspired by Linux cons
 <h1>Github Contributions</h1>
 
 {{ partial "contrib.html" . }}
+
+<h1>Latest posts</h1>
+
+<div class="posts-list">
+{{ with .Site.GetPage "/posts" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+        <div class="post">
+            <p>
+                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>    
+    {{ end }}
+{{ end }}
+</div>
 
 {{ end }}

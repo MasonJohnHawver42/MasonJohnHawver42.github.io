@@ -57,8 +57,8 @@ def generate_html(weeks):
     max_contributions = max(date_to_contributions.values(), default=1)
 
     def get_color(contributions):
-        intensity = int(255 * contributions / max_contributions)
-        return f"rgba(0, {intensity}, 0, 255)" if contributions > 0 else "rgba(255, 255, 255, 0.15)"  # Gradient from black to green
+        intensity = int(180 * contributions / max_contributions) + (255 - 180)
+        return f"rgba(0, {intensity}, 0, 1)" if contributions > 0 else "rgba(255, 255, 255, 0.05)"  # Gradient from black to green
 
     # HTML Structure
     html = ["<html>", "<head>", "<style>"]
