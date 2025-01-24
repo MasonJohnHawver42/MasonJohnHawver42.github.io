@@ -10,13 +10,24 @@
         </p>
 
         <p>
-            So, if you’re looking for answers to life’s biggest questions, I can’t promise those. But if you’re here for something a little more chaotic, you’ve definitely found the right spot. And if you find something perplexing along the way? Don’t panic. That’s just part of the ride.
+            So, if you’re looking for answers to life’s biggest questions, I can’t promise those. But if you’re here for something a little more chaotic, you’ve definitely found the right spot. And if you find something perplexing along the way? Don’t panic. That’s just part of the ride. ...
+            <a href="about/">(more)</a>
         </p>
-        <a style="align-self: left;" href="about/">(more)</a>
     </div>
 
     <div>
         {{ partial "ascii-art.html" . }}
+
+        <div style="margin-top: 1em; display: flex; justify-content: center; align-items: center;">
+            <p style="margin-bottom: 0px;">
+                <a href="https://github.com/MasonJohnHawver42">Github</a> |
+                <a href="/Mason_Hawver_Resume.pdf">Resume</a> |
+                <a href="/Mason_Hawver_Transcript.pdf">Transcript</a> |
+                <a href="https://masonjohnhawver.itch.io/">Itch</a> 
+            </div>
+            <div style="margin-top: .125em; display: flex; justify-content: center; align-items: center;">
+                <a href="https://www.linkedin.com/in/mason-jh/">Linkedin</a>
+        </div>
     </div>
 
 </div>
@@ -39,24 +50,24 @@
 {{ end }}
 </div>
 
-<h1>Github Contributions</h1>
-
-{{ partial "contrib.html" . }}
-
 <h1>Latest posts</h1>
 
 <div class="posts-list">
 {{ with .Site.GetPage "/posts" }}
     {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
         <div class="post">
-            <p>
+            <!-- <p> -->
                 <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
                 <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
                 {{ .Summary }}
-            </p>
+            <!-- </p> -->
         </div>    
     {{ end }}
 {{ end }}
 </div>
+
+<h1>Github Contributions</h1>
+
+{{ partial "contrib.html" . }}
 
 {{ end }}

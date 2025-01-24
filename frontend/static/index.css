@@ -1,0 +1,29 @@
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+	--nav-background-color: rgb(30, 30, 33);
+    --cell-background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+    --nav-background-color: #e6eef6;
+    --cell-background-color: rgba(56, 53, 53, 0.099);
+    --page-width: 60em;
+    }
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--nav-background-color);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.59);
+  }
+
+
