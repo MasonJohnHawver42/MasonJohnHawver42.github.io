@@ -14,11 +14,7 @@ languageCode = "en-us"
   [[params.navlinks]]
   name = "about/"
   url = "about/"
-
-  [[params.navlinks]]
-  name = "posts/"
-  url = "posts/"
   
   [[params.navlinks]]
-  name = "photos/"
+  name = "projects/"
   url = "photos/"

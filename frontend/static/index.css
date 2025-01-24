@@ -2,8 +2,9 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-	--nav-background-color: rgb(30, 30, 33);
+	--nav-background-color: rgb(0, 0, 0);
     --cell-background-color: rgba(255, 255, 255, 0.05);
+    --background-color: #121212;
     }
 }
 
